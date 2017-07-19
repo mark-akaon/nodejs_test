@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+  body
+    h1 hello jade
+
+    ul
+      -for(var i=0; i<5; i++)
+        li coding
+
+    div= time
+
+    p
+      | foo bar baz
+      | rawr rawr
+      | super cool
+      | go jade go
+    
+    ul 
+      li.first 
+        a(href='topic?id=0') JavaScript
+      li 
+        a(href='topic?id=1') NodeJs
+      li.last
+        a(href='topic?id=2') Express
