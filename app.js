@@ -1,3 +1,7 @@
+/*global console, res, req, require, module,  __dirname*/
+/*jshint node:true*/
+'use strict';
+
 process.env.NODE_ENV = ( process.env.NODE_ENV && ( process.env.NODE_ENV ).trim().toLowerCase() == 'production' ) ? 'production' : 'development';
 if( process.env.NODE_ENV == 'production' ) { 
   console.log("Production Mode"); 
@@ -86,14 +90,13 @@ app.get('/topic/:id', function(req, res) {
   ];
 
   var output = `
-    <a href="/topic?id=0">JavaScript</a><br>
-    <a href="/topic?id=1">Nodejs</a><br>
-    <a href="/topic?id=2">Express</a><br><br>
+    <a href="/topic/0">JavaScript</a><br>
+    <a href="/topic/1">Nodejs</a><br>
+    <a href="/topic/2">Express</a><br><br>
     ${topics[req.params.id]}
   `;
 
   res.send(output);
-  
   //res.send(topics[req.query.id] + " " + req.query.name);
 });
 
