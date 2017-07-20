@@ -20,7 +20,7 @@ app.set('views', './views');
 app.use(express.static('public'));
 
 app.get('/template', function(req, res) {
-  res.render('temp', {time:Date(), title:'Jade'});
+  res.render('temp', {time: new Date(), title:'Jade'});
 });
 
 app.get('/route', function(req, res) {
